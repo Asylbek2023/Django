@@ -1,0 +1,17 @@
+<!--/templates/registration/signup.html-->
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<h2>Регистрация нового пользователя</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Sugn Up</button>
+</form>
+
+<a href="{% url 'login' %}">Back to login</a>
+<a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}
